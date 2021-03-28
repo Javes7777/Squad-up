@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block scripts %}
+    <script src={% static "main.js" %} defer></script>
+{% endblock scripts %}
+
+{% block content %}
+    <div>{{object.name}} will take place:</div>
+    <div id="Timer-box"> {{object.when|date:"M d, Y H:m:s"}}</div>
+    <div>Time Left:</div>
+    <div id="countdown box" class="text center mt-3 h1">
+        <div class=spinner-border role="status"></div>
+    </div>
+{% endblock content %}
